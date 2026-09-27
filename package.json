@@ -1,0 +1,9 @@
+{
+  "name": "windfall-checkout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Windfall subscription site with Razorpay Standard Checkout",
+  "dependencies": {
+    "razorpay": "^2.9.4"
+  }
+}

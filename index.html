@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Windfall: the grants and prizes nobody tells you about</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--page:#e9f2ec;--paper:#d3e8dc;--ink:#17324d;--red:#c23b30;--line:rgba(23,50,77,.4);--pat:rgba(23,50,77,.08);--bi:#f4fbf6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--page:#0e1c26;--paper:#173042;--ink:#d3e9de;--red:#ef6b5e;--line:rgba(211,233,222,.4);--pat:rgba(211,233,222,.07);--bi:#0e1c26}}
+:root[data-theme="dark"]{--page:#0e1c26;--paper:#173042;--ink:#d3e9de;--red:#ef6b5e;--line:rgba(211,233,222,.4);--pat:rgba(211,233,222,.07);--bi:#0e1c26}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:400 17px/1.6 "Libre Franklin",system-ui,sans-serif}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+.hand{font-family:Caveat,"Segoe Script","Bradley Hand",cursive;font-weight:700}
+.small{font-size:14px;opacity:.82}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--page);border-bottom:2px solid var(--ink)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:58px}
+nav .brand{font-size:32px;margin-right:auto;color:inherit;text-decoration:none}
+nav a{color:inherit;text-decoration:none;font-weight:500;font-size:15px}
+nav a:hover{text-decoration:underline}
+@media(max-width:640px){nav .lk{display:none}}
+.btn{display:inline-block;background:var(--ink);color:var(--bi);font:700 16px "Libre Franklin",sans-serif;text-decoration:none;padding:13px 22px;border-radius:3px;border:2px solid var(--ink);cursor:pointer}
+.btn:hover{background:transparent;color:var(--ink)}
+nav .btn{padding:8px 14px;font-size:14px;color:var(--bi)}
+nav .btn:hover{color:var(--ink)}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+section{padding:56px 0 8px}
+h2{font-family:Caveat,cursive;font-size:clamp(38px,6vw,54px);line-height:1;margin:0 0 8px}
+.lead{max-width:56ch;margin:0 0 22px}
+.cheque{position:relative;margin-top:34px;background:repeating-radial-gradient(circle at 12% 120%,transparent 0 9px,var(--pat) 9px 10px),repeating-radial-gradient(circle at 92% -30%,transparent 0 11px,var(--pat) 11px 12px),var(--paper);border:2px solid var(--ink);border-radius:6px;padding:26px 26px 30px 44px;overflow:hidden}
+.cheque::before{content:"";position:absolute;left:14px;top:0;bottom:0;border-left:2px dashed var(--line)}
+.top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pay{margin-top:24px}
+.pay h1{font-size:clamp(46px,9vw,88px);line-height:.95;margin:2px 0 0;border-bottom:2px solid var(--ink);padding-bottom:6px;max-width:15ch}
+.amt{position:absolute;right:26px;top:74px;border:2px solid var(--ink);padding:6px 12px;text-align:center;background:var(--paper);font-weight:700;line-height:1.3}
+.amt b{display:block;font-size:26px}
+.memo{max-width:46ch;margin:22px 0 26px}
+.sign{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.stamp{position:absolute;right:30px;bottom:24px;border:3px solid var(--red);color:var(--red);padding:4px 14px;font:700 26px/1 Caveat,cursive;transform:rotate(-9deg);border-radius:4px;animation:thunk .5s .5s cubic-bezier(.3,1.6,.5,1) backwards}
+@keyframes thunk{from{opacity:0;transform:rotate(-9deg) scale(2.2)}}
+@media(prefers-reduced-motion:reduce){.stamp{animation:none}html{scroll-behavior:auto}}
+.facts{display:flex;flex-wrap:wrap;gap:0;margin-top:26px;border:2px solid var(--ink)}
+.facts div{flex:1 1 150px;padding:14px 16px;border-right:1px dashed var(--line)}
+.facts b{display:block;font:700 34px/1 Caveat,cursive}
+.steps{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink);counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:52px 1fr;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.steps li::before{content:counter(s);font:700 44px/1 Caveat,cursive;color:var(--red)}
+.steps b{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+.chip{background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:6px 15px;font:500 15px "Libre Franklin",sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bi)}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:600px;margin-top:10px}
+th{text-align:left;font-size:15px;border-bottom:2px solid var(--ink);padding:8px 10px 8px 0}
+td{padding:12px 10px 12px 0;border-bottom:1px dashed var(--line);vertical-align:top}
+td:first-child{font-weight:700}
+.mail{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:start}
+@media(max-width:720px){.mail{grid-template-columns:1fr}}
+.slip{background:var(--paper);border:2px solid var(--ink);padding:20px 22px;box-shadow:6px 6px 0 var(--ink)}
+.slip h3{margin:0 0 4px;font:700 30px/1 Caveat,cursive}
+.slip hr{border:0;border-top:1px dashed var(--line);margin:12px 0}
+.slip p{margin:4px 0}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:2px solid var(--ink);border-left:1px dashed var(--line)}
+.rules div{padding:18px 18px 20px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+.rules b{display:block;font:700 26px/1.1 Caveat,cursive;margin-bottom:4px}
+.price{border:2px solid var(--ink);background:var(--paper);padding:26px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+.price .n{font:700 84px/1 Caveat,cursive}
+.tog{display:inline-flex;border:2px solid var(--ink);border-radius:99px;margin-bottom:14px}
+.tog button{border:0;background:transparent;color:var(--ink);font:500 15px "Libre Franklin",sans-serif;padding:6px 16px;border-radius:99px;cursor:pointer}
+.tog button[aria-pressed=true]{background:var(--ink);color:var(--bi)}
+ul.inc{margin:0;padding-left:20px}
+details{border-bottom:1px dashed var(--line);padding:14px 0}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 0;max-width:62ch}
+.cta{margin-top:60px;background:var(--ink);color:var(--bi);padding:44px 0}
+.cta h2{margin-bottom:14px}
+.cta .btn{background:var(--bi);color:var(--ink);border-color:var(--bi)}
+footer{padding:28px 0 40px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand hand" href="#top">Windfall</a><a class="lk" href="#how">How it works</a><a class="lk" href="#ledger">Browse</a><a class="lk" href="#issue">Sample issue</a><a class="lk" href="#pricing">Pricing</a><a class="btn" href="#pricing">Subscribe</a></div></nav>
+
+<main class="wrap" id="top">
+<section style="padding-top:0">
+<div class="cheque">
+ <div class="top small"><span>Windfall funding digest</span><span>Delivered every Monday</span></div>
+ <div class="pay"><span class="small">Pay to the order of</span><h1 class="hand">You, every Monday.</h1></div>
+ <div class="amt"><span class="small">Cost to apply</span><b>$0</b></div>
+ <p class="memo">Grants, prizes, fellowships and free credits most people never hear about, sorted into one short email with the deadline and the official link on every entry.</p>
+ <div class="sign"><a class="btn" href="#pricing">Start for $7 a month</a><span class="small">First issue free. Cancel any time.</span></div>
+ <div class="stamp" aria-hidden="true">Paid weekly</div>
+</div>
+<div class="facts">
+ <div><b>4 to 6</b><span class="small">new entries every week</span></div>
+ <div><b>5 min</b><span class="small">to read the whole issue</span></div>
+ <div><b>100%</b><span class="small">link to the official source</span></div>
+ <div><b>$0</b><span class="small">application fees, ever</span></div>
+</div>
+</section>
+
+<section id="how">
+<h2>How it works</h2>
+<p class="lead">Money is given away all the time. It just isn't advertised anywhere you'd look. We do the looking.</p>
+<ol class="steps">
+ <li><div><b>We search</b>Every week we go through funders, universities, companies and local programs for open applications.</div></li>
+ <li><div><b>We filter</b>Anything with a fee, a dead link, or an unclear winner is thrown out. What's left is short and real.</div></li>
+ <li><div><b>You get one email</b>Monday morning. Each entry says what it pays, who qualifies, the deadline and how long it takes to apply.</div></li>
+ <li><div><b>You apply</b>Click through to the official page. You never pay us anything to apply, and neither do they.</div></li>
+</ol>
+</section>
+
+<section id="ledger">
+<h2>Browse the ledger</h2>
+<p class="lead">Pick who you are and see what an issue looks like for you. Sample entries only, real ones start on your first Monday.</p>
+<div class="chips" id="chips" role="group" aria-label="Filter by who you are"></div>
+<p class="small" id="count" aria-live="polite"></p>
+<div class="tw"><table><thead><tr><th>Kind</th><th>What it pays for</th><th>Deadline</th><th>Time to apply</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+
+<section id="issue">
+<h2>A look inside an issue</h2>
+<div class="mail">
+ <div class="slip">
+  <h3>Windfall, Monday issue</h3><span class="small">Sample layout</span><hr>
+  <p><b>Closing this week</b></p><p>One entry with a deadline before Friday, so nothing expires unseen.</p><hr>
+  <p><b>New and open</b></p><p>Four to six fresh entries, each with the amount, who qualifies, and the official link.</p><hr>
+  <p><b>Quick wins</b></p><p>Anything you can apply for in under thirty minutes.</p><hr>
+  <p><b>Ending soon</b></p><p>A short list of what's about to close next week.</p>
+ </div>
+ <div>
+  <p class="lead">Every issue follows the same shape, so you can read it fast and know exactly where to look. Nothing is padded and nothing is a sponsor in disguise.</p>
+  <ul class="inc"><li>The amount up front</li><li>Who is allowed to apply</li><li>Deadline and time it takes</li><li>The official link, nothing else</li></ul>
+ </div>
+</div>
+</section>
+
+<section>
+<h2>Our rules</h2>
+<div class="rules">
+ <div><b>Official sources only</b>No aggregator links, no middlemen. You go straight to the funder.</div>
+ <div><b>No fees</b>Anything that charges to apply is left out.</div>
+ <div><b>Deadlines checked</b>Dates are checked in the week we send them.</div>
+ <div><b>No sponsors</b>Nobody pays to be listed. Only subscribers pay us.</div>
+</div>
+</section>
+
+<section id="pricing">
+<h2>Pick how you pay</h2>
+<div class="tog" role="group" aria-label="Billing period"><button id="bm" aria-pressed="true">Monthly</button><button id="by" aria-pressed="false">Yearly</button></div>
+<div class="price">
+ <div><div class="n" id="amt">$7</div><div class="small" id="per">per month</div></div>
+ <ul class="inc"><li>Every Monday issue</li><li>The full archive</li><li>Reply to a real person</li><li>Cancel from the payment page</li></ul>
+ <a class="btn" id="buy" href="#">Subscribe</a>
+<p class="small" id="pay-status" role="status" aria-live="polite" style="margin-top:10px"></p>
+</div>
+</section>
+
+<section id="faq">
+<h2>Questions</h2>
+<details><summary>Do I pay to apply for any of these?</summary><p>No. Anything that charges an application fee is left out.</p></details>
+<details><summary>Where do the listings come from?</summary><p>Every entry links to the official page of whoever is giving the money, so you can check it before spending any time.</p></details>
+<details><summary>What if I don't win anything?</summary><p>Cancel in one click from the payment page. The free first issue lets you judge the quality before you pay.</p></details>
+<details><summary>Is this for people outside the US?</summary><p>Each entry lists who qualifies, including country, so you can skip what doesn't apply to you.</p></details>
+<details><summary>How many issues do I get?</summary><p>One a week, every Monday, plus access to every past issue in the archive.</p></details>
+<details><summary>How do I cancel?</summary><p>Use the link in any email or the payment page. It takes one click and there are no questions.</p></details>
+</section>
+</main>
+
+<div class="cta"><div class="wrap"><h2 class="hand">Your first issue is free.</h2><p>Read one Monday, then decide.</p><a class="btn" href="#pricing">Get the first issue</a></div></div>
+<footer class="small"><div class="wrap"><span>Windfall. Sent every Monday.</span><span>Not legal or financial advice. Check each funder's rules before applying.</span></div></footer>
+
+<script>
+var D=[["Grant","Equipment or software for a small business","Rolling","1 hour",["Small business","Freelancers"]],
+["Prize","Best idea in a student design contest","End of month","3 hours",["Students","Creators"]],
+["Fellowship","A monthly stipend to finish a creative project","6 weeks out","A weekend",["Creators"]],
+["Credit","Free cloud and software credits for early startups","Rolling","20 minutes",["Small business","Freelancers","Students"]],
+["Grant","Travel money for a student conference","3 weeks out","2 hours",["Students"]],
+["Prize","Pitch contest with seed funding","Quarterly","Half a day",["Small business"]],
+["Grant","Materials budget for an independent artist","Rolling","1 hour",["Creators","Freelancers"]],
+["Credit","Free design and editing tools for a year","Rolling","10 minutes",["Students","Creators","Freelancers"]]];
+var W=["All","Students","Freelancers","Small business","Creators"],cur="All",chips=document.getElementById("chips"),rows=document.getElementById("rows"),cnt=document.getElementById("count");
+function draw(){rows.innerHTML="";var n=0;D.forEach(function(r){if(cur!=="All"&&r[4].indexOf(cur)<0)return;n++;var t=document.createElement("tr");for(var i=0;i<4;i++){var c=document.createElement("td");c.textContent=r[i];t.appendChild(c)}rows.appendChild(t)});
+cnt.textContent=n+" sample "+(n==1?"entry":"entries")+" for "+(cur==="All"?"everyone":cur.toLowerCase());
+Array.prototype.forEach.call(chips.children,function(b){b.setAttribute("aria-pressed",b.textContent===cur)})}
+W.forEach(function(w){var b=document.createElement("button");b.className="chip";b.textContent=w;b.onclick=function(){cur=w;draw()};chips.appendChild(b)});draw();
+var bm=document.getElementById("bm"),by=document.getElementById("by");
+function plan(y){bm.setAttribute("aria-pressed",!y);by.setAttribute("aria-pressed",y);document.getElementById("amt").textContent=y?"$60":"$7";document.getElementById("per").textContent=y?"per year, two months free":"per month";document.getElementById("buy").href="https://razorpay.me/@krishnakiranvengaldas"}
+bm.onclick=function(){plan(false)};by.onclick=function(){plan(true)};
+</script>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+// Public key id — safe to expose in the browser. Never put the key secret here.
+var RAZORPAY_KEY_ID = "rzp_test_Th1cGcbUV5RxpI";
+
+async function startCheckout(rupees){
+  var buyBtn=document.getElementById('buy'), status=document.getElementById('pay-status');
+  var orig=buyBtn.textContent;
+  buyBtn.textContent="Starting checkout…"; status.textContent="";
+  try{
+    var orderRes=await fetch('/api/create-order',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({amount:Math.round(rupees*100),currency:'INR'})});
+    if(!orderRes.ok){throw new Error('order-failed')}
+    var order=await orderRes.json();
+
+    var rzp=new Razorpay({
+      key:RAZORPAY_KEY_ID,
+      amount:order.amount,
+      currency:order.currency,
+      order_id:order.order_id,
+      name:"Windfall",
+      description:"Weekly funding digest subscription",
+      theme:{color:"#17324d"},
+      handler:async function(resp){
+        buyBtn.textContent="Confirming payment…";
+        try{
+          var vr=await fetch('/api/verify-payment',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(resp)});
+          var result=await vr.json();
+          if(result.verified){status.textContent="Payment confirmed — you're subscribed."}
+          else{status.textContent="We couldn't verify that payment. If money left your account, contact us and we'll sort it out."}
+        }catch(e){status.textContent="Payment went through, but we couldn't confirm it. Contact us to check."}
+        buyBtn.textContent=orig;
+      },
+      modal:{ondismiss:function(){buyBtn.textContent=orig}}
+    });
+    rzp.on('payment.failed',function(resp){status.textContent="Payment failed: "+resp.error.description;buyBtn.textContent=orig});
+    rzp.open();
+  }catch(err){
+    console.error(err);
+    status.textContent="Something went wrong starting checkout. Please try again.";
+    buyBtn.textContent=orig;
+  }
+}
+
+document.getElementById('buy').addEventListener('click',function(e){
+  e.preventDefault();
+  var isYearly=document.getElementById('by').getAttribute('aria-pressed')==='true';
+  startCheckout(isYearly?60:7); // swap for your real INR pricing
+});
+</script>
+</body>
+</html>
